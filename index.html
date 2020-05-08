@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Javascript</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        var hola= "Hola mundo"
+        let hello = "Hello world"
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+        console.log(window.hola);
+        console.log(window.hello);
+        //Ambito de bloque
+        console.log("*************var******************");
+        var musica = "Rock"
+        console.log("Variable música antes de bloque", musica);
+        //Esto es un bloque
+        {
+            var musica = "Pop";
+            console.log("Variable musica dentro del boque", musica);
+        }
+        console.log("Variable musica después el bloque",musica);
+        console.log("*************let******************");
+        let musica2 = "Rock"
+        console.log("Variable música antes de bloque", musica2);
+        //Esto es un bloque
+        {
+            let musica2 = "Pop";
+            console.log("Variable musica dentro del boque", musica2);
+        }
+        console.log("Variable musica después el bloque",musica2);
+
+
+    </script>
+</body>
+</html>
