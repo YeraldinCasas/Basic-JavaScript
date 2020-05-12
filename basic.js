@@ -125,7 +125,22 @@ let v = Boolean(true); //Se pone la palabra reservada boolean como constructor
 let f = Boolean (false);
 console.log(verdadero,falso);
 console.log(typeof verdadero, typeof falso);
-console.log(Boolean(0));
-console.log(Boolean(-7));
+console.log(Boolean(0)); //Más información MDN falsy
+console.log(Boolean(-7)); //Más información MDN truhty
 console.log(Boolean(""));
 console.log(Boolean(" "));
+
+console.log("***************undefined, null & NaN**********************")
+let indefinida;
+console.log(indefinida); 
+/* Aparecerá en la consola como undefined, esto significa que no se ha 
+incializado la variable y que el valor está ausente lo asinga JS */
+
+let nulo = null
+console.log(nulo);
+/* Null es un valor especial que indica la ausencia de un valor
+pero es asignado así intencionalmente por el programador 
+ */
+
+let noEsUnNumero = "Jelou" * 98
+console.log(noEsUnNumero); //Aparece en consola como NaN Not a Number "No es un numero"
