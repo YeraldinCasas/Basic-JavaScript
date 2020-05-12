@@ -15,6 +15,8 @@ console.log("Variable música antes de bloque", musica);
     console.log("Variable musica dentro del boque", musica);
 }
 console.log("Variable musica después el bloque",musica);
+
+
 console.log("*************let******************");
 let musica2 = "Rock"
 console.log("Variable música antes de bloque", musica2);
@@ -23,7 +25,9 @@ console.log("Variable música antes de bloque", musica2);
     let musica2 = "Pop";
     console.log("Variable musica dentro del boque", musica2);
 }
+
 console.log("Variable musica después el bloque",musica2);
+
 console.log("*************const******************");
 let a;
 const PI = 3.1416
@@ -88,5 +92,28 @@ console.log(
  console.log(lorem.trim());
  console.log(lorem.split(" "));
  console.log(lorem.split(","));
- console.log(lorem.charCodeAt([i]))
-    
+ 
+console.log("*************concatenación******************");
+let nombre02="Yeraldin";
+let apellido02="Casas";
+//Concatenación
+let saludo02= "Hola mi nombre es " + nombre02 + " " + apellido02 + "."; 
+console.log("Concatenación",saludo02);
+//Interpolación Template string
+saludo03=`Hola mi nombre es ${nombre02} ${apellido02}.`
+console.log("Interpolación ES6",saludo03);
+
+console.log("*******************Números*****************");
+let numero1= 2;
+let numero3 = new Number (1);
+let numero4 =7.1897
+let numero5 ="567.68876"
+console.log(numero1,numero3);
+console.log(numero4.toFixed(1));
+console.log(numero4.toFixed(3));
+console.log(numero4.toFixed(4));
+console.log(parseInt(numero4));//Devuelve solo la parte entera del número
+console.log(typeof(numero5), typeof(numero4));// typeof me dice el tipo de valor en este caso numero o string
+console.log(numero3 + numero1);
+console.log(numero3 + parseInt(numero5)); //parseInt permite sumar un string numero más un número 
+console.log(numero3 + parseFloat(numero5)); //parseFloat suma decimales correctamente
