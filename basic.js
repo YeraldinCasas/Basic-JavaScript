@@ -117,3 +117,15 @@ console.log(typeof(numero5), typeof(numero4));// typeof me dice el tipo de valor
 console.log(numero3 + numero1);
 console.log(numero3 + parseInt(numero5)); //parseInt permite sumar un string numero más un número 
 console.log(numero3 + parseFloat(numero5)); //parseFloat suma decimales correctamente
+
+console.log("***************Valores booleanos****************");
+let verdadero = true;
+let falso = false;
+let v = Boolean(true); //Se pone la palabra reservada boolean como constructor
+let f = Boolean (false);
+console.log(verdadero,falso);
+console.log(typeof verdadero, typeof falso);
+console.log(Boolean(0));
+console.log(Boolean(-7));
+console.log(Boolean(""));
+console.log(Boolean(" "));
