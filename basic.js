@@ -209,3 +209,30 @@ const funcionExpresada = function(){
 }
 
 funcionExpresada();
+
+console.log("*******************Array***********************")
+const ab = []
+const cd = [1, "Hola", true, ["A","B","C","D"]];
+console.log(cd)
+console.log(cd[1]);
+console.log(cd[3]) //Acceder al aray que está en el array e la posición 3
+console.log(cd[3][2]) //Acceder a la posición 2 del tercer elememto , letra C
+
+const ef = Array.of(1,2,3,4,6,7,8);
+console.log(ef)
+
+const gh = Array(100).fill(false);
+console.log(gh);
+
+
+console.log("************Propiedades arrays********************");
+const colores2 = ["Rojo","Verde","Azul"];
+console.log(colores2);
+colores2.push("Negro"); //Agrega un elemento al final 
+console.log(colores2);
+colores2.pop(); //quita el último elemento 
+console.log(colores2); 
+
+colores2.forEach(function (el, index) {
+    console.log(`<li id="${index}">${el}<li>`)
+});
