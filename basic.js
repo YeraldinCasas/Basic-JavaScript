@@ -236,3 +236,42 @@ console.log(colores2);
 colores2.forEach(function (el, index) {
     console.log(`<li id="${index}">${el}<li>`)
 });
+
+console.log("*****************Objetos*******************");
+
+const objeti = {};
+console.log(objeti);
+
+/* Dentro de un objeto a las variables se les van a llamar atributos/propiedades  y a las funciones métodos*/
+const yeralia = {
+    nombre: "Yeraldin",
+    edad:"28",
+    cumpleaños: "2/08/91",
+    pasatiempo: ["correr","comer","dormir"],
+    soltero: true,
+    contacto : {
+        email: "yeralgc@hotmai.com",
+        celular: 55678984,
+    },
+saludar: function () {
+    console.log("Hola");
+},
+decirMiNombre : function () {
+    console.log(`Hola mi nombre es ${this.nombre} y tengo ${this.edad} años y me puedes contactar con ${this.contacto.email}`)
+},
+}
+
+console.log(yeralia);
+console.log(yeralia["cumpleaños"]);
+console.log(yeralia["nombre"]);
+
+console.log(yeralia.nombre);
+console.log(yeralia.pasatiempo);
+console.log(yeralia.pasatiempo[2]);
+yeralia.saludar();
+yeralia.decirMiNombre();
+
+console.log(Object.keys(yeralia));
+console.log(Object.values(yeralia));
+console.log(yeralia.hasOwnProperty("nombre"));
+console.log(yeralia.hasOwnProperty("nacimiento"));
