@@ -275,3 +275,72 @@ console.log(Object.keys(yeralia));
 console.log(Object.values(yeralia));
 console.log(yeralia.hasOwnProperty("nombre"));
 console.log(yeralia.hasOwnProperty("nacimiento"));
+
+console.log("**************Operadores aritméticos****************");
+//Operadores aritméticos 
+let jk = 2 + 5 * 2;
+console.log(jk);
+console.log("******Modulo*********");
+let modulo = 5 % 2 //Devuelve el residuo de una división 
+console.log(modulo, "devuelve el residuo de una división");
+
+console.log("****************Operadores relacionales*************")
+/* Operadores relacionales  */
+ console.log(8>9);
+ console.log (8<9);
+ console.log(8>=9);
+ console.log(8<=9);
+ console.log(7>=7);
+
+ /* 
+ = 1 igual es asinación de variable
+ ==  2 iguales es comparación de valores 
+ === 3 iguales es comparación de tipo de dato y valor
+ */
+ console.log(7==7);
+ console.log("7" == 7);
+ console.log(0== false);
+
+ console.log(7===7);
+ console.log("7" ===7);
+ console.log(0 === false);
+
+ console.log("************operadores de incremento y drecemento*************");
+
+ let i = 1; //i de incremento 
+ //i = i + 2; //Está manera y la del siguiente renglón significan lo mismo, dan el mismo resultado
+ //i += 2; 
+ //i -= 2 //Se puede utilizar con cualquier operación
+ //i /=2
+ i*=2
+ console.log(i);
+
+ console.log("********** operador unario********"); //Se usa cuando vamos aumentando o dismnuyendo en un solo valor por cada vez
+ let i2 = 2;
+ i2 ++;
+ console.log(i2);
+
+ let i3 = 2;
+ i3 --
+ console.log(i3);
+
+ console.log("***********Operadores lógicos*********")
+ /*
+  ! Not,no : Niega es decir lo que es verdadero lo vuelve falso y visceversa 
+ || Or, o: Cuando tengo dos o más condiciones, con que una se cumpla es decir OR validará, con que una sea
+  verdadera OR validará y será verdadero
+ && and, y : Cuando tengo dos o más condiciones todas tienen que cumplirse, es decir ser verdaderas para que AND 
+ se validé 
+  */
+
+  console.log(true);
+  console.log(!true, "Era verdadero pero lo volvió falso"); 
+  console.log(false);
+  console.log(!false, "Era falso pero lo volvió verdadero ");
+  console.log((9===9)||("9"===9));
+  console.log((9===9)&&("9"===9));
+  console.log((9===9)&&("9"==="9"));
+
+
+
+
