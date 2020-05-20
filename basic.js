@@ -330,7 +330,7 @@ console.log("****************Operadores relacionales*************")
  || Or, o: Cuando tengo dos o más condiciones, con que una se cumpla es decir OR validará, con que una sea
   verdadera OR validará y será verdadero
  && and, y : Cuando tengo dos o más condiciones todas tienen que cumplirse, es decir ser verdaderas para que AND 
- se validé 
+ se valide
   */
 
   console.log(true);
@@ -342,5 +342,98 @@ console.log("****************Operadores relacionales*************")
   console.log((9===9)&&("9"==="9"));
 
 
+  console.log("******************Condicionales*************");
+  //if- else
+  let mayoriaEdad = 17;
+  if(mayoriaEdad > 17){
+      console.log("Eres mayor de edad");
+  }
+  else {
+      console.log("Eres menor de edad");
+  }
+
+  //if- else if- else
+ /*  Déjame dormir 0hrs - 5hrs
+  Buenos días 6hrs - 11hrs
+  Buenas tardes 12hrs - 18hrs
+  Buenas noches 19hrs - 23hrs
+   */
+
+   let hora1 = 20;
+
+   if(hora1 >= 0 && hora1 <= 5){
+       console.log("Déjame dormir");
+    } else if (hora1 >=6 && hora1 <=11) {
+        console.log("Buenos días");
+    } else if (hora1 >= 12 && hora1 <=18){
+        console.log("Buenas tardes");
+    } else {
+        console.log("Buenas noches");
+    }
+    
+//Diferente lógica mismo resultado 
+    if(hora1 < 6 ){
+        console.log("Déjame dormir");
+     } else if (hora1 > 5 && hora1 < 12){
+         console.log("Buenos días");
+     } else if (hora1 > 11 && hora1 < 19){
+         console.log("Buenas tardes");
+     } else {
+         console.log("Buenas noches");
+     }
 
 
+  console.log("**************Operador ternario*************");
+/*   El operador ternario es la simplificaciín del if else y se escribe de la
+  siguiente manera 
+  (condición) ? verdadera : falsa 
+ */
+
+ let edad02= 19;
+
+ let eresMayor = (edad02 >= 18)
+  ? "Eres mayor de edad" 
+  : "Eres menor de edad";
+ 
+ console.log(eresMayor);
+
+ //swith-case
+
+ /* 
+ domingo 0
+ lunes 1
+ martes 2
+ miércoles 3
+ jueves 4
+ viernes 5
+ sábado 6
+  */
+
+  let diaSemana= 6;
+
+  switch (diaSemana) {
+      case 0:
+          console.log("Domingo")
+          break;
+          case 1:
+              console.log("Lunes")
+              break;
+              case 2:
+                  console.log("Martes")
+                  break;
+                  case 3:
+                      console.log("Miércoles")
+                      break;
+                      case 4:
+                          console.log("Jueves")
+                          break;
+                          case 5:
+                              console.log("Viernes")
+                              break;
+                              case 6:
+                                  console.log("Sábado")
+                                  break;
+      default:
+          console.log("El día no existe")
+          break;
+  }
