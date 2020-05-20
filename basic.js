@@ -511,3 +511,47 @@ let cadenaDeTexto = "Haciendo pruebas con for of"
 for (const iterator of cadenaDeTexto) {
     console.log(iterator);    
 }; 
+
+console.log("***************************Manejo de errores******************");
+
+/* try {
+    console.log("En el try se agrega el código a evaluar");
+} catch (error) {
+    console.log("Catch captura cualquier error surgido en el Try");
+} finally {
+console.log("El bloque finally se ejecutará siempre al final de un bloque TryCatch")
+} //Solo sale el funally en consola porque no hay error, haya error o no ese bloque siempre se ejecuta.  */
+
+try {
+    console.log("En el try se agrega el código a evaluar");
+    noExisteEstaVariable; 
+    console.log("Segundo mensaje en el try");
+} catch (error) {
+    console.log("Catch captura cualquier error surgido en el Try");
+    console.log(error);
+} finally {
+console.log("El bloque finally se ejecutará siempre al final de un bloque TryCatch")
+}
+
+console.log("**************Mensajes personalizados de error***************");
+
+try {
+let numeroError= 10;
+if (isNaN(numeroError)) {
+throw new Error ("El carácter introducido no es un número")
+}
+console.log(numeroError * numeroError);
+} catch (error) {
+console.log(`Se produjo el siguiente error: ${error}`);
+}
+
+
+try {
+    let numeroError1= "y";
+    if (isNaN(numeroError1)) {
+    throw new Error ("El carácter introducido no es un número")
+    }
+    console.log(numeroError1 * numeroError1);
+    } catch (error) {
+    console.log(`Se produjo el siguiente error: ${error}`);
+    }
