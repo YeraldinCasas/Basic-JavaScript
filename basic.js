@@ -607,3 +607,39 @@ console.log("***************continue*******************");
     //En la destructuración de objetos las variables a crear deben llamarse igual que las propiedades
     let {mañana, tarde, noche, madrugada} = horarios;
 console.log(mañana, tarde, noche, madrugada);
+
+console.log("****************Objetos literales******************");
+
+let escribir= "pluma"
+let borrar = "corrector"
+let apuntes = "libreta"
+let lectura = "libro"
+
+const utilesEscolares = {
+    escribir: escribir,
+    borrar: borrar,
+    apuntes: apuntes,
+    lectura: lectura,
+    transportar: function () {
+        console.log ("Mochila");
+    }
+};
+
+console.log(utilesEscolares);
+utilesEscolares.transportar();
+
+/* Con ES6 crea automaticamente las propiedades del objeto con las variables que indiquemos, 
+si quiero agregar una propiedad lo puedo hacer directamente creando el nuevo objeto */
+const school = {
+    escribir, 
+    borrar,
+    apuntes,
+    lectura,
+    mochila:"Azul",
+    transportar1 () {
+        console.log("Lonchera para la comida")
+    }
+};
+
+console.log(school);
+school.transportar1(); //Para invocar la función
