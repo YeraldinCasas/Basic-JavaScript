@@ -436,4 +436,78 @@ console.log("****************Operadores relacionales*************")
       default:
           console.log("El día no existe")
           break;
+  };
+
+  console.log("*************Ciclos***************");
+  //While significa mienras... 
+  let contador=0;
+
+  while (contador < 10) {
+      console.log("while" + contador);
+      contador ++;    
   }
+
+  do {
+    console.log("do while"+ contador);
+    contador ++; 
+  } while (contador < 10);
+
+
+  //Ciclo for
+/* for (incialización de la variable; condición; decremento o incremento) {
+    sentencias que ejecuta el for
+} */
+
+
+  for (let i = 0; i < 10; i++) {
+      console.log("for" + i);   
+  }
+
+  let listaNumeros = [10,20,30,40,50,60,70,80,90,100];
+
+  for (let i= 0; i < listaNumeros.length; i++) {
+      console.log(listaNumeros[i]);
+  }
+
+//Si se le indica el número de recorrido solo pinta lo que se le indique en el ciclo
+  let listaNombres = ["Juana", "Juan", "María", "Jonás", "Ruth"];
+  for (let i= 0; i < 2; i++) {
+    console.log(listaNombres[i]);
+}
+
+console.log("**************for in*************")
+//Me permite recorrer/iterar las porpiedades o propiedades de un objeto primitivo
+
+const desayuno = {
+    bebida: "café",
+    platillo: "huevos motuleños",
+    fruta: "mango",
+    jugo: "verde",
+    pan: "conde"
+}
+
+for (const propiedad in desayuno) {
+console.log(propiedad);
+}
+
+for (const propiedad in desayuno) {
+    console.log(`Key:${propiedad}, Value:${desayuno.propiedad}`);
+}
+
+for (const propiedad in desayuno) {
+    console.log(`Key:${propiedad}, Value:${desayuno[propiedad]}`);
+}
+
+
+console.log("***************for of******************");
+//El método for of me permite recorrer cualuqier elemento que sea iterable en JS (Ejemplo arreglos, cadenas de texto) 
+
+for (const elemento of listaNombres) {
+console.log(elemento);
+};
+
+let cadenaDeTexto = "Haciendo pruebas con for of"
+
+for (const iterator of cadenaDeTexto) {
+    console.log(iterator);    
+}; 
