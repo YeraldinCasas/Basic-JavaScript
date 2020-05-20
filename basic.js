@@ -643,3 +643,36 @@ const school = {
 
 console.log(school);
 school.transportar1(); //Para invocar la función
+
+console.log("*********** Parámetros REST & Operador Spread ******************");
+
+function sumaVarios (a,b) {
+    return a + b
+}
+
+function sumaVariosRest (a,b,...c) { //El parametro Rest son los tres puntos suspensivos
+let resultado = a + b;
+c.forEach(function (n) {
+    resultado += n
+});
+return resultado
+}
+
+console.log(sumaVarios(1,2));
+console.log(sumaVariosRest(1,2,3,4));
+console.log(sumaVariosRest(1,2,3,4,5));
+console.log(sumaVariosRest(1,2,3,4,5,6));
+console.log(sumaVariosRest(1,2,3,4,5,6,7));
+console.log(sumaVariosRest(1,2,3,4,5,5,7,8));
+
+//Operador de propagación 
+
+const arregloUNo = [1,2,3,4,5];
+const arregloDos = [5,6,7,8,9,0];
+console.log(arregloUNo,arregloDos);
+
+const arreglo3 = [arregloUNo,arregloDos];
+console.log(arreglo3);
+
+const arregloTres = [...arregloUNo, ...arregloDos];
+console.log(arregloTres);
