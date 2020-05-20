@@ -555,3 +555,28 @@ try {
     } catch (error) {
     console.log(`Se produjo el siguiente error: ${error}`);
     }
+
+
+    console.log("*************Break & Continue");
+
+    const arregloNumeros =[1,2,3,4,5,6,7,8,9,0];
+
+    for (let i=0; i< arregloNumeros.length; i++) {
+        console.log(arregloNumeros[i]);
+    }; 
+
+console.log("************break*****************");
+    for (let i=0; i < arregloNumeros.length; i++) {
+        if (i===5) { //Cuando se cumple la condicón se corta el ciclo
+            break;
+        }
+        console.log(arregloNumeros[i]);
+    };
+
+console.log("***************continue*******************");
+    for (let i=0; i < arregloNumeros.length; i++) {
+        if (i===5){ //En cuanto se cumple la condición, la brinca y continua, se salta esa iteración y sigue
+            continue;
+        }
+        console.log(arregloNumeros[i]);
+    }
