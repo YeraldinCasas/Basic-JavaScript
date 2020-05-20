@@ -579,4 +579,31 @@ console.log("***************continue*******************");
             continue;
         }
         console.log(arregloNumeros[i]);
+    };
+
+    console.log("*****************Desctructuración**********************");
+     
+    let numerosArreglo = [1,2,3,4];
+     
+    //Sin utilizar destructuración, si qusiera asignar cada valor a una nueva variable
+    let uno = numerosArreglo[0];
+    let dos = numerosArreglo[1];
+    let tres = numerosArreglo[2];
+    let cuatro = numerosArreglo[3];
+
+    console.log(uno,dos,tres,cuatro);
+
+    //Con destructuración 
+    const [one,two,three,four] = numerosArreglo;
+    console.log(one,two,three,four); 
+
+    const horarios = {
+        mañana: "8am",
+        tarde: "1pm",
+        noche: "8pm",
+        madrugada: "3am"
     }
+
+    //En la destructuración de objetos las variables a crear deben llamarse igual que las propiedades
+    let {mañana, tarde, noche, madrugada} = horarios;
+console.log(mañana, tarde, noche, madrugada);
