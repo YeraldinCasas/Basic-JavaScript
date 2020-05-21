@@ -860,3 +860,53 @@ function gato (nombre, genero, tamanio) {
 
  lolaBunny1.sonar();
  lolaBunny1.saludarY1();
+
+
+//Las clases no reciben parámetros tienen un método llamado ocnstructor que es el que recibe esos atributos 
+  class Animal2 {
+    //Atributos
+    //El constructor es un método especial en el momento de instanciar una clase 
+    constructor(nombre, genero ){
+        this.nombre=nombre,
+        this.genero = genero
+    }
+    sonar(){
+        console.log("Sooooooooooooonido");
+    }
+    
+ 
+    saludar05(){
+        console.log(`Hola me llamo ${this.nombre}`);
+    }
+
+    
+    
+};
+
+    class perro02 extends Animal2 {
+        constructor (nombre,genero,tamanio){
+        //Super es un método que manda llamar el constructor de la clase padre 
+        super(nombre,genero);
+        this.tamanio = tamanio;
+    }
+    sonar(){
+        console.log("Soy un perro y mi sonido es el ladrido")
+    }
+
+   ladrar(){
+        console.log("guuuuau guuuuuauuu");
+    }
+}
+   //Métodos 
+
+   const mimi = new Animal2 ("Mimi","Hembra");
+   const scooby = new perro02 ("Scooby", "Macho", "Gigante");
+
+   console.log(mimi);
+   mimi.saludar05();
+   mimi.sonar();
+
+   console.log(scooby);
+   scooby.saludar05();
+   scooby.sonar();
+   scooby.ladrar();
