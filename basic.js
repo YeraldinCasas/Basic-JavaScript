@@ -866,9 +866,10 @@ function gato (nombre, genero, tamanio) {
   class Animal2 {
     //Atributos
     //El constructor es un método especial en el momento de instanciar una clase 
-    constructor(nombre, genero ){
+    constructor(nombre, genero){
         this.nombre=nombre,
-        this.genero = genero
+        this.genero = genero,
+        this.raza = null;
     }
     sonar(){
         console.log("Sooooooooooooonido");
@@ -896,7 +897,21 @@ function gato (nombre, genero, tamanio) {
    ladrar(){
         console.log("guuuuau guuuuuauuu");
     }
-}
+    static queEres(){
+        console.log("Mamífero carnívoro de la familia de los cánidos, que constituye una subespecie del lobo.");
+     }
+    /*  Los setter y los getters son métodos especiales que
+     nos permiten establecer y obtener los valores de atributos 
+     de nuestra clase  */
+    get getRaza() {
+         return this.raza
+     }
+     set setRaza(raza){
+         this.raza = raza;
+     }
+};
+
+perro02.queEres();
    //Métodos 
 
    const mimi = new Animal2 ("Mimi","Hembra");
@@ -910,3 +925,6 @@ function gato (nombre, genero, tamanio) {
    scooby.saludar05();
    scooby.sonar();
    scooby.ladrar();
+   console.log(scooby.getRaza); 
+   scooby.setRaza = "Gran Danés";
+   console.log(scooby.getRaza);
