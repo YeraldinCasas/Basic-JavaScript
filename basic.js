@@ -676,3 +676,74 @@ console.log(arreglo3);
 
 const arregloTres = [...arregloUNo, ...arregloDos];
 console.log(arregloTres);
+
+console.log("*******************Funciones de flecha***************");
+
+//función anonima 
+const saludar = function () {
+    console.log("Hola");
+}
+saludar(); 
+//Funcion declarada 
+function  saludar04 () {
+console.log("Hola funcion declarada")
+}
+saludar04();
+
+const arrowFunction = () => {
+    console.log("fución de flecha")
+}
+
+arrowFunction();
+
+//En las arrow function si tienes una sola linea de código puedes omitir las llaves {}
+const unaLineaCódigo = () => console.log ("Función flecha con una sola linea de código");
+unaLineaCódigo();
+
+const salut = (persona) => console.log(`Hola ${persona}`);
+salut("Nayeli");
+
+//Cuando una función flecha recibe solo un parametro se pueden omitir tambié los parentesis ()
+const salut1 = persona1 => console.log(`Hola ${persona1}`);
+salut("Maico");
+
+
+//Función común 
+const adicion = function (a,b) {
+    return a + b
+}
+
+console.log(adicion(3,3));
+
+//Fubción anterior trasnsformada a función de flecha 
+const adicion1 = (a,b) => a + b; 
+
+console.log(adicion1(3,2));
+
+const funcionDeVariasLineas = () => {
+    console.log("uno");
+    console.log("dos");
+    console.log("tres")
+}
+
+funcionDeVariasLineas();
+
+const arregloNum = [1,2,3,4,5,6,7,8,9,0]
+ 
+arregloNum.forEach((elemento,index) => console.log(`${elemento} está en a posición ${index}`));
+
+function mascotaPerro () {
+    console.log(this)
+};
+
+mascotaPerro();
+
+const  perroMascota = {
+    nombre: "Rorris",
+    ladrar() {
+        console.log(this)
+   }
+}
+
+perroMascota.ladrar();
+
