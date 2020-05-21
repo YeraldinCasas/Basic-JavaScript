@@ -826,12 +826,35 @@ función como tal */
         console.log (`Hola me llamo ${this.nombre}`);
     }
 
+
+    //Herencia prototipica
+function gato (nombre, genero, tamanio) {
+    this.super = Animal;
+    this.super (nombre, genero);
+    this.tamanio = tamanio; 
+}
+
+//Gato está heredando de Animal 
+ gato.prototype = new Animal1();
+ gato.prototype.constructor = gato; 
+
+ //Sobreescirtura de métodos padre
+ gato.prototype.sonar = function (){
+     console.log("Soy un dato y mi sonido es el ronroneo");
+ }
+
+ gato.prototype.ronroneo = function () {
+     console.log("miiiiiiiiiiauuuuu")
+ }
+
+
  const snoopy1 = new Animal1("Snoopy","Macho");
  const lolaBunny1 = new Animal1("Lola Bunny","Hembra");
+ const lolo = new gato ("Lolo","Macho","Mediano");
 
  console.log(snoopy1);
  console.log(lolaBunny1);
- 
+ console.log(lolo)
  snoopy1.sonar();
  snoopy1.saludarY1();
 
