@@ -747,3 +747,93 @@ const  perroMascota = {
 
 perroMascota.ladrar();
 
+console.log("*****************Prototipos***********************")
+
+/* POO programación orinetada a objetos 
+clases - Modelo a seguir
+objetos- es una instancia de ua clase, es como una copia 
+ atributos- es una caracteristica o propiedad del objeto (los atributos son variables dentro de un objeto) 
+ metodos- son las acciones que un objeto puede realizar loe métodos gramaticalmente son verbos son acciones
+ (los metodos son funciones dentro de un objeto)
+ 
+ Javascript es un lenguaje de programación orientada a objetos basado en prototipos y no en clases
+ como en otros lenguajes de programación,
+ Un prototipo en JS es un mecanismo por el cual un objeto puede heredar atributos y metodos de un objeto
+ padre es decir funciones  */
+
+
+const animal = {
+    nombre: "Lolo",
+    sonido(){
+        console.log("Miiiiiiiiaaaaaauuuuuuu");
+    }
+}
+
+console.log(animal);
+
+//Esto es un objeto literal
+const animal2 = {
+    nombre: "Rorris",
+    sonido(){
+        console.log("Guaaaaauuu Guuuuuaaauuuuu");
+    }
+}
+ console.log(animal2);
+ 
+ //En las clases los nombres empiezan con mayúscula UpperCamelCase 
+
+
+// Función constructora, 
+function Animal (nombre, genero){
+    //Atributos
+     this.nombre=nombre,
+     this.genero = genero, 
+     //Método
+     this.sonar= function (){
+         console.log("Hago sonidos porque estoy vivo");
+     }
+     this.saludarY = function(){
+         console.log (`Hola me llamo ${this.nombre}`);
+     }
+ }
+
+ const snoopy = new Animal("Snoopy","Macho");
+ const lolaBunny = new Animal ("Lola Bunny","Hembra");
+
+ console.log(snoopy);
+ console.log(lolaBunny);
+ 
+ snoopy.sonar();
+ snoopy.saludarY();
+
+ lolaBunny.sonar();
+ lolaBunny.saludarY();
+
+
+/* Función constructora donde asignamos los métodos al prototipo y no a la
+función como tal */
+ function Animal1 (nombre, genero){
+    //Atributos
+     this.nombre=nombre,
+     this.genero = genero
+    }
+    
+    //Métodos agregados al prototipo de la función constructora 
+    Animal1.prototype.sonar= function (){
+        console.log("Hago sonidos porque estoy vivo");
+    }
+    Animal1.prototype.saludarY1 = function(){
+        console.log (`Hola me llamo ${this.nombre}`);
+    }
+
+ const snoopy1 = new Animal1("Snoopy","Macho");
+ const lolaBunny1 = new Animal1("Lola Bunny","Hembra");
+
+ console.log(snoopy1);
+ console.log(lolaBunny1);
+ 
+ snoopy1.sonar();
+ snoopy1.saludarY1();
+
+ lolaBunny1.sonar();
+ lolaBunny1.saludarY1();
