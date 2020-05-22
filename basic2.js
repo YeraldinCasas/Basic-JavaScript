@@ -42,4 +42,32 @@ console.log("Hora en Londres", fecha.toUTCString());
 console.log("Segundos desde el 1ro de enero de 1970 fecha Time stamp", Date.now());
 
 let cumpleYer = new Date(1991,7,2);
-console.log("Mi cumpleaños", cumpleYer)
+console.log("Mi cumpleaños", cumpleYer);
+
+console.log("*******************Objeto Math*****************")
+
+console.log(Math);
+console.log("Número Pi", Math.PI);
+
+
+console.log("Valor absoluto de un número",Math.abs(-7.7));
+
+console.log("Número redoneado hacia el número inmediato entero mayor",Math.ceil(4.5));
+
+console.log("Número redondeado hacia el número inmediato entero menor", Math.floor(4.5));
+
+console.log("Número redondeado hacia el número entero más cercano inmediato", Math.round(7.8));
+
+console.log("Número redondeado hacia el número entero más cercano inmediato", Math.round(7.2));
+
+console.log("Raíz cuadrada: Ejemplo 81 es igual a", Math.sqrt(81));
+
+console.log("Elevar exponentes", Math.pow(2,5)) //Primer número es la base el segundo el exponente 
+
+console.log("Me dice si un núm es pos neg o 0", Math.sign(-23));
+
+console.log("Me da un número al azar entre 0 y 1", Math.random());
+
+console.log("Número aletorio entre 0 y 1000", Math.random()*1000);
+
+console.log("Número redondeado al más cercano inmediato y número al azar", Math.round(Math.random()*1000));
