@@ -121,3 +121,17 @@ console.log(undefined&&"Derecha");
 console.log(""&&"Derecha");
 console.log(0&&"Derecha");
 
+console.log("*************Alert,prompt y confirm******************");
+//No es necesario poner el objeto window
+/* console.log(window);
+window.alert("Hola esto es una alerta");
+window.confirm("Esto es una alerta pero tengo dos botones: cancelar/aceptar");
+window.prompt("Hola esto es un promt y le permite al usuaio ingresar un valor"); */
+
+let alerta = alert("Hola esto es una alerta");
+let confirmación = confirm("Esto es una alerta pero tengo dos botones: cancelar/aceptar");
+let aviso = prompt("Hola esto es un aviso y le permite al usuaio ingresar un valor");
+
+console.log(alerta);
+console.log(confirmación);
+console.log(aviso);
