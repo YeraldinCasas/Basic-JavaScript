@@ -71,3 +71,53 @@ console.log("Me da un número al azar entre 0 y 1", Math.random());
 console.log("Número aletorio entre 0 y 1000", Math.random()*1000);
 
 console.log("Número redondeado al más cercano inmediato y número al azar", Math.round(Math.random()*1000));
+
+console.log("******************Operadores de Cortocircuito***************");
+
+/* Cortocircuito OR - cuando el valor de la izquierda en la expresión 
+siempre pueda validar a true es el valor que se cargara por defecto.
+
+Cortocircuito AND - cuando el valor de la izquierda en la expresión 
+siempre pueda validar a false es el valor que se cargará por defecto */
+
+//A esto se le conoce como asignación  de valor por defecto, "Desconocido"
+function saludar (nombre = "Desconocido") {
+    console.log(`Hola ${nombre}`)
+}
+
+saludar();
+saludar("Changoleon");
+saludar ();
+
+//Antes la asignación por defecto hacia de esta manera 
+function saludarAntes (nombre) {
+    nombre = nombre || "Desconocido"
+    console.log(`Holaaaaaaa ${nombre}`)
+};
+
+saludarAntes();
+saludarAntes("Margarito");
+
+console.log("********OR elegirá siempre el valor de la izquiera si este tiende a TRUE*******");
+console.log("Izquierda"||"Derecha");
+console.log(1911||"Derecha");
+console.log(true||"Derecha");
+console.log({}||"Derecha");
+console.log([]||"Derecha");
+
+
+//Aqui se va por e valor que tienda a true 
+console.log(false||"Derecha");
+console.log(null||"Derecha");
+console.log(undefined||"Derecha");
+console.log(""||"Derecha");
+console.log(0||"Derecha");
+console.log(-2||"Derecha");
+
+console.log("********AND elegirá siempre el valor de la izquiera si este tiende a FALSE*******");
+console.log(false&&"Derecha");
+console.log(null&&"Derecha");
+console.log(undefined&&"Derecha");
+console.log(""&&"Derecha");
+console.log(0&&"Derecha");
+
