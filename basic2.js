@@ -6,19 +6,16 @@ console.log(fecha);
 //Día del mes 
 console.log("Día del mes",fecha.getDate());
 
-
 //Día de la semana iniciando la cuenta en domingo igual a 0 
 console.log("Día de la semana",fecha.getDay());
 
 //Mes Enero es la posición 0
 console.log("Mes", fecha.getMonth());
 
-
 console.log("Año",fecha.getFullYear());
 
 //Hora formato de 24 horas  
 console.log("Hora",fecha.getHours());
-
 
 console.log("Minutos", fecha.getMinutes());
 
@@ -47,8 +44,8 @@ console.log("Mi cumpleaños", cumpleYer);
 console.log("*******************Objeto Math*****************")
 
 console.log(Math);
-console.log("Número Pi", Math.PI);
 
+console.log("Número Pi", Math.PI);
 
 console.log("Valor absoluto de un número",Math.abs(-7.7));
 
@@ -128,10 +125,28 @@ window.alert("Hola esto es una alerta");
 window.confirm("Esto es una alerta pero tengo dos botones: cancelar/aceptar");
 window.prompt("Hola esto es un promt y le permite al usuaio ingresar un valor"); */
 
-let alerta = alert("Hola esto es una alerta");
+/* let alerta = alert("Hola esto es una alerta");
 let confirmación = confirm("Esto es una alerta pero tengo dos botones: cancelar/aceptar");
-let aviso = prompt("Hola esto es un aviso y le permite al usuaio ingresar un valor");
+let aviso = prompt("Hola esto es un aviso y le permite al usuaio ingresar un valor"); */
 
-console.log(alerta);
+/* console.log(alerta);
 console.log(confirmación);
-console.log(aviso);
+console.log(aviso); */
+
+console.log("*************Expresiones regulares******************");
+/* Las expresiones regulares son una secuencia de caracteres que 
+forman un patrón de búsqueda y que principalmente es utulizado 
+en la búsqueda de cadenas de texto  */
+
+let cadena="Lorem ipsum dolor sit amet consectetur adipiscing elit vel, tellus lorem accumsan enim phasellus sociosqu vitae tincidunt, risus vulputate faucibus litora sagittis id nunc. Parturient gravida rhoncus accumsan faucibus nascetur lobortis, venenatis dis porta habitant pretium risus luctus, nunc eros fusce sociosqu feugiat. "
+
+/* bandera "g" quehaga el escaneo general,"i" para que ignore 
+si es mayúscula o minuscúla, para usr dos bandera es "ig"*/
+/* 
+let expReg = new RegExp("lorem","ig");
+console.log(expReg.test(cadena));
+console.log(expReg.exec(cadena)); */
+
+let expReg1 = /lorem{1,3}/ig; //Los numeros de los corchetes significan que la palabra está entre 1 y 3 veces
+ console.log(expReg1.test(cadena));
+ console.log(expReg1.exec(cadena));
