@@ -150,3 +150,34 @@ console.log(expReg.exec(cadena)); */
 let expReg1 = /lorem{1,3}/ig; //Los numeros de los corchetes significan que la palabra está entre 1 y 3 veces
  console.log(expReg1.test(cadena));
  console.log(expReg1.exec(cadena));
+
+ console.log("***********Funciones anonimas autoejecuables*********************");
+
+ (function(){
+     console.log("Mi primer IIFE")
+ })();
+
+ (function(d,w,c){
+     console.log(d);
+     console.log(w);
+     console.log(c);
+     c.log("Esta es una abrebviación del console.log")
+ })(document, window, console);
+
+ console.log("**********Formas de ecirbir funciones anónimas***************");
+
+ (function(){
+     console.log("Versión clásica")
+ })();
+
+ ((function () {
+     console.log("Versión Crockford")
+ }));
+
+ +function () {
+     console.log("Versión Unaria")
+ }();
+
+ !function () {
+     console.log("Versión Facebook")
+ }();
